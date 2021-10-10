@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+
+    <script> 
+        //fonction qui évalue le chiffre et renvoie la sortie
+        function calculer() 
+        { 
+            let a = document.getElementById("output").value 
+            let b = eval(a) 
+            document.getElementById("output").value = b 
+            document.getElementById("output").style.color = "blue";
+        } 
+        //fonction qui affiche la valeur
+        function afficher(val) 
+        { 
+            document.getElementById("output").value+=val 
+        } 
+        //fonction qui efface l'écran 
+        function effacer() 
+        { 
+            document.getElementById("output").value = "" 
+        } 
+    </script>
+</head>
+<body>
+    <main>
+        <div class="table"> 
+
+            <div class="screen"> 
+               <input  id="output">
+            </div> 
+            <div class="touch"> 
+                <button onclick="afficher('(')" class="silver">(</button>
+                <button onclick="afficher(')')" class="silver">)</button>
+                <button onclick="afficher('%')" class="silver">%</button>
+                <button onclick="effacer()" class="silver" id="dle">AC</button> 
+
+                <button onclick="afficher('7')" class="silver_clair">7</button> 
+                <button onclick="afficher('8')" class="silver_clair">8</button> 
+                <button onclick="afficher('9')" class="silver_clair">9</button> 
+                <button onclick="afficher('/')" class="silver">&#247</button>
+                
+                <button onclick="afficher('4')" class="silver_clair">4</button> 
+                <button onclick="afficher('5')" class="silver_clair">5</button> 
+                <button onclick="afficher('6')" class="silver_clair">6</button> 
+                <button onclick="afficher('*')" class="silver">&times;</button>
+                
+                <button onclick="afficher('1')" class="silver_clair">1</button> 
+                <button onclick="afficher('2')" class="silver_clair">2</button> 
+                <button onclick="afficher('3')" class="silver_clair">3</button> 
+                <button onclick="afficher('-')" class="silver">&#95</button>
+
+                <button onclick="afficher('0')" class="silver_clair">0</button> 
+                <button onclick="afficher('.')" class="silver_clair">.</button>
+                <button onclick="calculer()" class="blue">=</button> 
+                <button onclick="afficher('+')" class="silver"> &#43 </button> 
+            </div> 
+         </table>
+    </main>
+     
+</body>
+</html>
